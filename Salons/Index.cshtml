@@ -1,0 +1,30 @@
+﻿@model IEnumerable<spor_sitesi.Models.Salon>
+
+<h2>Salonlar</h2>
+
+@if (Model == null || !Model.Any())
+{
+    <p>Henüz kayıtlı salon yok.</p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Adres</th>
+                <th>Telefon</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Ad</td>
+                    <td>@item.Adres</td>
+                    <td>@item.Telefon</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

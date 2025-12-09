@@ -1,0 +1,25 @@
+﻿@model spor_sitesi.Models.Salon
+
+<h2>Yeni Salon Ekle</h2>
+
+<form asp-action="Create" method="post">
+
+    <div>
+        <label>Ad</label>
+        <input asp-for="Ad" />
+    </div>
+
+    <div>
+        <label>Adres</label>
+        <input asp-for="Adres" />
+    </div>
+
+    <div>
+        <label>Telefon</label>
+        <input asp-for="Telefon" />
+    </div>
+
+    <button type="submit">Kaydet</button>
+</form>
+
+<a href="/Salons">Listeye Dön</a>
