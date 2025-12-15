@@ -4,7 +4,6 @@
 
 namespace spor_sitesi.Migrations
 {
-    /// <inheritdoc />
     public partial class AddSalonToRandevu : Migration
     {
         /// <inheritdoc />
@@ -15,11 +14,11 @@ namespace spor_sitesi.Migrations
                 table: "Hizmetler");
 
             migrationBuilder.AddColumn<int>(
-                name: "SalonId",
-                table: "Randevular",
-                type: "int",
-                nullable: false,
-                defaultValue: 0);
+     name: "SalonId",
+     table: "Randevular",
+     type: "int",
+     nullable: true);
+
 
             migrationBuilder.AlterColumn<int>(
                 name: "SalonId",
