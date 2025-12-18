@@ -27,6 +27,7 @@ namespace spor_sitesi.Controllers
         [HttpGet]
         public IActionResult Create()
         {
+
             return View();
         }
 
@@ -34,6 +35,12 @@ namespace spor_sitesi.Controllers
         [HttpPost]
         public IActionResult Create(Antrenor antrenor)
         {
+            if (antrenor.MusaitBaslangic >= antrenor.MusaitBitis)
+            {
+                ModelState.AddModelError("", "Müsait başlangıç, bitişten küçük olmalı.");
+                return View(antrenor);
+            }
+
             _context.Antrenorler.Add(antrenor);
             _context.SaveChanges();
             return RedirectToAction("Index");

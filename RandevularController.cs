@@ -133,24 +133,70 @@ namespace spor_sitesi.Controllers
         [HttpPost]
         public IActionResult Create(Randevu randevu)
         {
+            // Dropdownlar (hata olursa geri dönerken lazım olacak)
+            void LoadDropdowns()
+            {
+                ViewBag.Salonlar = _context.Salonlar.ToList();
+                ViewBag.Hizmetler = _context.Hizmetler.ToList();
+                ViewBag.Antrenorler = _context.Antrenorler.ToList();
+            }
+
+            // 0) Geçmiş tarih/saat kontrolü
             var secilenTarihSaat = randevu.Tarih.Date + randevu.BaslangicSaati;
             if (secilenTarihSaat < DateTime.Now)
             {
-                ViewBag.Hizmetler = _context.Hizmetler.ToList();
-                ViewBag.Antrenorler = _context.Antrenorler.ToList();
-
+                LoadDropdowns();
                 ViewBag.Hata = "Geçmiş bir tarih/saat için randevu oluşturamazsınız.";
                 return View(randevu);
             }
 
+            // 1) Antrenör müsaitlik kontrolü
+            var antrenor = _context.Antrenorler
+                .FirstOrDefault(a => a.Id == randevu.AntrenorId);
+
+            if (antrenor == null)
+            {
+                ModelState.AddModelError("", "Antrenör bulunamadı.");
+            }
+            else
+            {
+                if (randevu.BaslangicSaati < antrenor.MusaitBaslangic ||
+                    randevu.BaslangicSaati >= antrenor.MusaitBitis)
+                {
+                    ModelState.AddModelError("", "Seçilen saat antrenörün müsaitlik saatleri dışında.");
+                }
+            }
+
+            // 2) ÇAKIŞMA kontrolü (aynı antrenör + aynı tarih + aynı saat)
+            bool cakismaVarMi = _context.Randevular.Any(r =>
+                r.AntrenorId == randevu.AntrenorId &&
+                r.Tarih.Date == randevu.Tarih.Date &&
+                r.BaslangicSaati == randevu.BaslangicSaati &&
+                !r.IptalEdildiMi
+            );
+
+            if (cakismaVarMi)
+            {
+                ModelState.AddModelError("", "Bu antrenör bu saatte başka bir randevuya sahip.");
+            }
+
+            // 3) Hata varsa KAYDETME, formu geri göster
+            if (!ModelState.IsValid)
+            {
+                LoadDropdowns();
+                return View(randevu);
+            }
+
+            // 4) Ücret = seçilen hizmetin ücreti
             var hizmet = _context.Hizmetler.FirstOrDefault(h => h.Id == randevu.HizmetId);
             if (hizmet != null)
                 randevu.Ucret = hizmet.Ucret;
 
-            // 👤 giriş yapan kullanıcının Id'si
+            // 5) Giriş yapan kullanıcının Id'si
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             randevu.UyeId = userId;
 
+            // 6) Not null olmasın
             if (string.IsNullOrWhiteSpace(randevu.Not))
                 randevu.Not = "";
 
@@ -159,6 +205,18 @@ namespace spor_sitesi.Controllers
 
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public IActionResult HizmetlerByAntrenor(int antrenorId)
+        {
+            var hizmetler = _context.AntrenorHizmetler
+                .Where(x => x.AntrenorId == antrenorId)
+                .Select(x => new { x.Hizmet.Id, x.Hizmet.Ad })
+                .Distinct()
+                .ToList();
+
+            return Json(hizmetler);
+        }
+
 
         [Authorize(Roles = "Admin")]
         public IActionResult Approve(int id)
