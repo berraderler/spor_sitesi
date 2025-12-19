@@ -1,45 +1,7 @@
-﻿@model IEnumerable<spor_sitesi.Models.Randevu>
-
-<h2>Randevular</h2>
-
-<p>
-    <a href="/Randevular/Create">Yeni Randevu Oluştur</a>
-</p>
-
-@if (Model == null || !Model.Any())
-{
-    <p>Henüz randevu yok.</p>
+﻿@{
+    ViewData["Title"] = "Ana Sayfa";
 }
-else
-{
-    <table>
-        <thead>
-            <tr>
-                <th>Tarih</th>
-                <th>Başlangıç Saati</th>
-                <th>Hizmet</th>
-                <th>Antrenör</th>
-                <th>Ücret</th>
-                
+// Bu sayfa, uygulamanın ana giriş noktasıdır.
 
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>@item.Tarih.ToShortDateString()</td>
-                    <td>@item.BaslangicSaati</td>
-                    <td>@item.Hizmet?.Ad</td>
-                    <td>@item.Antrenor?.Ad @item.Antrenor?.Soyad</td>
-                    <td>@item.Ucret</td>
-                    <td>
-                        <a href="/Randevular/Edit/@item.Id">Düzenle</a> |
-                        <a href="/Randevular/Delete/@item.Id">Sil</a>
-                    </td>
-
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+<h2>Hoş geldin</h2>
+<p>Soldan veya adres çubuğundan /Salons ve /Hizmetler sayfalarına gidebilirsin.</p>
