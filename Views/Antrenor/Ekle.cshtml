@@ -1,0 +1,49 @@
+﻿@model Spor_web_sitesi.DTOs.Antrenor.AntrenorEkleViewModel
+
+<h3>Yeni Antrenör Tanımla</h3>
+
+<form asp-action="Ekle" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <!-- ANTRENÖR -->
+    <input asp-for="AdSoyad" class="form-control mb-2" placeholder="Ad Soyad" />
+    <input asp-for="UzmanlikAlani" class="form-control mb-2" placeholder="Uzmanlık Alanı" />
+    <textarea asp-for="Biyografi" class="form-control mb-3" placeholder="Biyografi"></textarea>
+
+    <hr />
+
+    <!-- GÜNLER -->
+    <label class="fw-bold">Çalışma Günleri</label>
+
+    @{
+        var gunler = new List<string>
+        {
+    "Pazartesi","Salı","Çarşamba","Perşembe",
+    "Cuma","Cumartesi","Pazar"
+    };
+    }
+
+    <div class="mb-3">
+        @foreach (var gun in gunler)
+        {
+            <div class="form-check">
+                <input class="form-check-input"
+                       type="checkbox"
+                       name="Gunler"
+                       value="@gun"
+                @(Model.Gunler.Contains(gun) ? "checked" : "") />
+                <label class="form-check-label">@gun</label>
+            </div>
+        }
+        <span asp-validation-for="Gunler" class="text-danger"></span>
+    </div>
+
+    <!-- SAATLER -->
+    <label>Başlangıç Saati</label>
+    <input asp-for="BaslangicSaat" type="time" class="form-control mb-2" />
+
+    <label>Bitiş Saati</label>
+    <input asp-for="BitisSaat" type="time" class="form-control mb-3" />
+
+    <button type="submit" class="btn btn-dark">Kaydet</button>
+</form>

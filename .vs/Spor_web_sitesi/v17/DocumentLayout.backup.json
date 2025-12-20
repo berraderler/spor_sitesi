@@ -1,0 +1,289 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|c:\\users\\msi\\desktop\\spor_web_sitesi\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|c:\\users\\msi\\desktop\\spor_web_sitesi\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|c:\\users\\msi\\desktop\\spor_web_sitesi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|c:\\users\\msi\\desktop\\spor_web_sitesi\\views\\hizmet\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|solutionrelative:views\\hizmet\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|c:\\users\\msi\\desktop\\spor_web_sitesi\\views\\hizmet\\ekle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|solutionrelative:views\\hizmet\\ekle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|c:\\users\\msi\\desktop\\spor_web_sitesi\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|c:\\users\\msi\\desktop\\spor_web_sitesi\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|c:\\users\\msi\\desktop\\spor_web_sitesi\\views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|solutionrelative:views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|c:\\users\\msi\\desktop\\spor_web_sitesi\\controllers\\antrenorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|solutionrelative:controllers\\antrenorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|c:\\users\\msi\\desktop\\spor_web_sitesi\\controllers\\analizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|solutionrelative:controllers\\analizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|c:\\users\\msi\\desktop\\spor_web_sitesi\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|c:\\users\\msi\\desktop\\spor_web_sitesi\\views\\analiz\\ekle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|solutionrelative:views\\analiz\\ekle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|c:\\users\\msi\\desktop\\spor_web_sitesi\\dtos\\analiz\\analizekleviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|solutionrelative:dtos\\analiz\\analizekleviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|c:\\users\\msi\\desktop\\spor_web_sitesi\\models\\hizmet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|solutionrelative:models\\hizmet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|c:\\users\\msi\\desktop\\spor_web_sitesi\\controllers\\hizmetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|solutionrelative:controllers\\hizmetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|c:\\users\\msi\\desktop\\spor_web_sitesi\\views\\analiz\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30CF1DF8-F611-4136-90C7-16BD3D61E36F}|Spor_web_sitesi.csproj|solutionrelative:views\\analiz\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Views\\Hizmet\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Hizmet\\Index.cshtml",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Views\\Hizmet\\Index.cshtml",
+              "RelativeToolTip": "Views\\Hizmet\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-20T15:58:39.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Ekle.cshtml",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Views\\Hizmet\\Ekle.cshtml",
+              "RelativeDocumentMoniker": "Views\\Hizmet\\Ekle.cshtml",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Views\\Hizmet\\Ekle.cshtml",
+              "RelativeToolTip": "Views\\Hizmet\\Ekle.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-20T15:57:38.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-20T15:56:38.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAIwGcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-20T15:54:40.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AccessDenied.cshtml",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Views\\Account\\AccessDenied.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\AccessDenied.cshtml",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Views\\Account\\AccessDenied.cshtml",
+              "RelativeToolTip": "Views\\Account\\AccessDenied.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-20T15:53:16.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-20T15:42:39.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AntrenorController.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Controllers\\AntrenorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AntrenorController.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Controllers\\AntrenorController.cs",
+              "RelativeToolTip": "Controllers\\AntrenorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T15:33:30.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAIwFUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T15:33:27.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAgwKAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-20T15:32:57.744Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T15:32:12.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "HizmetController.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Controllers\\HizmetController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HizmetController.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Controllers\\HizmetController.cs",
+              "RelativeToolTip": "Controllers\\HizmetController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCMAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T13:56:35.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Hizmet.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Models\\Hizmet.cs",
+              "RelativeDocumentMoniker": "Models\\Hizmet.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Models\\Hizmet.cs",
+              "RelativeToolTip": "Models\\Hizmet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T13:56:33.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Views\\Analiz\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Analiz\\Index.cshtml",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Views\\Analiz\\Index.cshtml",
+              "RelativeToolTip": "Views\\Analiz\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-20T13:56:09.874Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AnalizEkleViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\DTOs\\Analiz\\AnalizEkleViewModel.cs",
+              "RelativeDocumentMoniker": "DTOs\\Analiz\\AnalizEkleViewModel.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\DTOs\\Analiz\\AnalizEkleViewModel.cs",
+              "RelativeToolTip": "DTOs\\Analiz\\AnalizEkleViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T13:54:43.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Ekle.cshtml",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Views\\Analiz\\Ekle.cshtml",
+              "RelativeDocumentMoniker": "Views\\Analiz\\Ekle.cshtml",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Views\\Analiz\\Ekle.cshtml",
+              "RelativeToolTip": "Views\\Analiz\\Ekle.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-20T13:54:04.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AnalizController.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Controllers\\AnalizController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AnalizController.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\Spor_web_sitesi\\Controllers\\AnalizController.cs",
+              "RelativeToolTip": "Controllers\\AnalizController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T13:51:08.374Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

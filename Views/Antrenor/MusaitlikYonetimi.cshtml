@@ -1,0 +1,131 @@
+﻿@model Spor_web_sitesi.Models.Antrenor
+
+@{
+    ViewData["Title"] = "Çalışma Saatleri";
+    var gunler = new[] { "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar" };
+    var saatler = Enumerable.Range(8, 15).Select(h => $"{h:D2}:00"); // 08:00 - 22:00 arası
+}
+
+<div class="container py-5">
+    <div class="d-flex justify-content-between align-items-end mb-4">
+        <div>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-2">
+                    <li class="breadcrumb-item"><a asp-action="Index">Antrenörler</a></li>
+                    <li class="breadcrumb-item active">Müsaitlik</li>
+                </ol>
+            </nav>
+            <h2 class="fw-bold mb-0 text-indigo">@Model.AdSoyad - Haftalık Çizelge</h2>
+            <p class="text-muted mb-0">Üyelerin randevu alabileceği saat dilimlerini üzerlerine tıklayarak seçin.</p>
+        </div>
+        <div class="text-end">
+            <span class="badge bg-success-subtle text-success border border-success px-3 py-2 rounded-pill me-2">
+                <i class="bi bi-check-circle-fill me-1"></i> Müsait
+            </span>
+            <span class="badge bg-light text-muted border px-3 py-2 rounded-pill">
+                <i class="bi bi-dash-circle me-1"></i> Kapalı
+            </span>
+        </div>
+    </div>
+
+    <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="table-responsive">
+            <table class="table table-bordered border-light-subtle mb-0 text-center align-middle">
+                <thead class="bg-indigo text-white">
+                    <tr>
+                        <th style="width: 100px;" class="py-3">Saat</th>
+                        @foreach (var gun in gunler)
+                        {
+                            <th class="py-3">@gun</th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var saat in saatler)
+                    {
+                        <tr>
+                            <td class="bg-light fw-bold small text-secondary">@saat</td>
+                            @foreach (var gun in gunler)
+                            {
+                                // Mevcut müsaitlik var mı kontrolü
+                                var mevcut = Model.Musaitlikler.FirstOrDefault(m => m.Gun == gun && m.BaslangicSaat.ToString(@"hh\:mm") == saat);
+
+                                <td class="p-1">
+                                    @if (mevcut != null)
+                                    {
+                                        <form asp-action="MusaitlikSil" method="post" class="m-0">
+                                            <input type="hidden" name="id" value="@mevcut.Id" />
+                                            <input type="hidden" name="antrenorId" value="@Model.Id" />
+                                            <button type="submit" class="btn btn-slot btn-active w-100 py-3 rounded-3" title="Kapatmak için tıkla">
+                                                <i class="bi bi-check-lg"></i>
+                                            </button>
+                                        </form>
+                                    }
+                                    else
+                                    {
+                                        <form asp-action="MusaitlikEkle" method="post" class="m-0">
+                                            <input type="hidden" name="antrenorId" value="@Model.Id" />
+                                            <input type="hidden" name="gun" value="@gun" />
+                                            <input type="hidden" name="baslangic" value="@saat" />
+                                            <input type="hidden" name="bitis" value="@(TimeSpan.Parse(saat).Add(TimeSpan.FromHours(1)).ToString(@"hh\:mm"))" />
+                                            <button type="submit" class="btn btn-slot w-100 py-3 rounded-3" title="Açmak için tıkla">
+                                                <i class="bi bi-plus"></i>
+                                            </button>
+                                        </form>
+                                    }
+                                </td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<style>
+    .text-indigo {
+        color: #4f46e5;
+    }
+
+    .bg-indigo {
+        background-color: #4f46e5;
+    }
+
+    .btn-slot {
+        background-color: #f8fafc;
+        border: 1px dashed #e2e8f0;
+        color: #cbd5e1;
+        transition: all 0.2s;
+    }
+
+        .btn-slot:hover {
+            background-color: #f1f5f9;
+            border-color: #4f46e5;
+            color: #4f46e5;
+        }
+
+    .btn-active {
+        background-color: #ecfdf5 !important;
+        border: 1px solid #10b981 !important;
+        color: #059669 !important;
+        box-shadow: inset 0 2px 4px rgba(16, 185, 129, 0.1);
+    }
+
+        .btn-active:hover {
+            background-color: #fef2f2 !important;
+            border-color: #ef4444 !important;
+            color: #dc2626 !important;
+        }
+
+    .table th {
+        font-weight: 600;
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+    }
+
+    .breadcrumb-item a {
+        color: #4f46e5;
+        text-decoration: none;
+    }
+</style>

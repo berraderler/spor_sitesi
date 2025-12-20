@@ -1,0 +1,120 @@
+﻿@model Spor_web_sitesi.Models.Randevu
+
+@{
+    ViewData["Title"] = "Randevu Al";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-7">
+            <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+                <div class="bg-indigo p-4 text-white text-center">
+                    <i class="bi bi-calendar-plus display-4 mb-2"></i>
+                    <h2 class="fw-bold mb-0">Randevu Oluştur</h2>
+                    <p class="text-white-50 small">Antrenörünüzü ve size uygun saati seçin.</p>
+                </div>
+
+                <div class="card-body p-4 p-md-5">
+                    <form asp-action="Al" method="post">
+                        <!-- Hata Mesajları (Çakışma veya Müsaitlik Uyarısı) -->
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger border-0 rounded-3 small mb-4"></div>
+
+                        <div class="row g-4">
+                            <!-- Antrenör Seçimi -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Uzman Antrenör</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-0"><i class="bi bi-person-badge"></i></span>
+                                    <select asp-for="AntrenorId" class="form-select bg-light border-0 py-2"
+                                            asp-items="@(new SelectList(ViewBag.Antrenorler, "Id", "AdSoyad"))">
+                                        <option value="">Antrenör Seçiniz...</option>
+                                    </select>
+                                </div>
+                                <span asp-validation-for="AntrenorId" class="text-danger small"></span>
+                            </div>
+
+                            @if(User.IsInRole("Admin"))
+                            {
+                                <!-- Üye Seçimi -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Üye</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light border-0"><i class="bi bi-person-badge"></i></span>
+                                        <select asp-for="UyeId" class="form-select bg-light border-0 py-2"
+                                                asp-items="@(new SelectList(ViewBag.Uyeler, "Id", "UserName"))">
+                                            <option value="">Üye Seçiniz...</option>
+                                        </select>
+                                    </div>
+                                    <span asp-validation-for="UyeId" class="text-danger small"></span>
+                                </div>
+                            }
+
+                            <!-- Hizmet Seçimi -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Hizmet Türü</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-0"><i class="bi bi-award"></i></span>
+                                    <select asp-for="HizmetId" class="form-select bg-light border-0 py-2"
+                                            asp-items="@(new SelectList(ViewBag.Hizmetler, "Id", "Gosterim"))">
+                                        <option value="">Hizmet Seçiniz...</option>
+                                    </select>
+                                </div>
+                                <span asp-validation-for="HizmetId" class="text-danger small"></span>
+                            </div>
+
+                            <!-- Tarih ve Saat Seçimi -->
+                            <div class="col-12">
+                                <label class="form-label fw-bold">Randevu Tarihi ve Saati</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-0"><i class="bi bi-clock"></i></span>
+                                    <input asp-for="RandevuTarihi" type="datetime-local" class="form-control bg-light border-0 py-2"
+                                           min="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" />
+                                </div>
+                                <span asp-validation-for="RandevuTarihi" class="text-danger small"></span>
+                                <div class="form-text mt-2 text-muted">
+                                    <i class="bi bi-info-circle me-1"></i>
+                                    Antrenörün çalışma saatleri dışındaki seçimlerde sistem uyarı verecektir.
+                                </div>
+                            </div>
+
+                            <!-- Üye ID (Şimdilik Demo Veri) -->
+                            <input type="hidden" asp-for="UyeId" value="1" />
+
+                            <div class="col-12 pt-3">
+                                <button type="submit" class="btn btn-indigo w-100 py-3 rounded-3 fw-bold shadow-sm">
+                                    Randevu Talebini Gönder
+                                </button>
+                                <a asp-action="Index" class="btn btn-link w-100 text-secondary mt-2 text-decoration-none small text-center">
+                                    Mevcut Randevuları Listele
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .bg-indigo {
+        background-color: #4f46e5;
+    }
+
+    .btn-indigo {
+        background-color: #4f46e5;
+        color: white;
+        transition: 0.3s;
+    }
+
+        .btn-indigo:hover {
+            background-color: #4338ca;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+        }
+
+    .input-group-text {
+        color: #4f46e5;
+    }
+</style>

@@ -1,0 +1,104 @@
+﻿@using Spor_web_sitesi.DTOs.Authentication
+@model LoginViewModel
+
+@{
+    ViewData["Title"] = "Giriş Yap";
+}
+
+<div class="container d-flex align-items-center justify-content-center" style="min-height: 80vh;">
+    <div class="card shadow-lg border-0" style="max-width: 450px; width: 100%; border-radius: 20px; overflow: hidden;">
+        <div class="row g-0">
+            <div class="col-12 p-5">
+                <div class="text-center mb-4">
+                    <div class="display-6 text-primary mb-2">
+                        <i class="bi bi-lightning-charge-fill"></i>
+                    </div>
+                    <h2 class="fw-bold text-dark">Hoş Geldiniz</h2>
+                    <p class="text-muted small">Spor dolu bir güne hazır mısın?</p>
+                </div>
+
+                <form asp-action="Login" method="post" class="needs-validation">
+
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold small text-uppercase">E-Posta Adresi</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light border-end-0 text-muted" style="border-radius: 10px 0 0 10px;">
+                                <i class="bi bi-envelope"></i>
+                            </span>
+                            <input asp-for="Email" class="form-control bg-light border-start-0 py-2" placeholder="adiniz@spor.com" style="border-radius: 0 10px 10px 0;" />
+                        </div>
+                        <span asp-validation-for="Email" class="text-danger small"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold small text-uppercase">Şifre</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light border-end-0 text-muted" style="border-radius: 10px 0 0 10px;">
+                                <i class="bi bi-lock"></i>
+                            </span>
+                            <input asp-for="Password" type="password" class="form-control bg-light border-start-0 py-2" placeholder="••••••••" style="border-radius: 0 10px 10px 0;" />
+                        </div>
+                        <span asp-validation-for="Password" class="text-danger small"></span>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div class="form-check">
+                            <input asp-for="RememberMe" class="form-check-input" id="rememberMe" />
+                            <label class="form-check-label small text-muted" for="rememberMe">
+                                Beni Hatırla
+                            </label>
+                        </div>
+                        <a href="#" class="text-primary small text-decoration-none fw-bold">Şifremi Unuttum</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 py-2 shadow-sm mb-3" style="border-radius: 10px; font-weight: 600; background-color: #4f46e5; border: none;">
+                        Giriş Yap
+                    </button>
+
+                    <div asp-validation-summary="ModelOnly" class="text-danger small text-center mb-3"></div>
+
+                    <div class="text-center mt-3">
+                        <p class="small text-muted mb-0">Hesabınız yok mu?</p>
+                        <a asp-action="Register" class="text-primary fw-bold text-decoration-none">Hemen Ücretsiz Kayıt Ol</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        /* Spor salonu havasını hissettiren hafif bir arka plan geçişi */
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+
+    .form-control:focus {
+        box-shadow: none;
+        border-color: #4f46e5;
+        background-color: #fff !important;
+    }
+
+    .btn-primary:hover {
+        background-color: #4338ca !important;
+        transform: translateY(-1px);
+        transition: all 0.2s;
+    }
+
+    /* Giriş sayfasını canlandıralım */
+    .card {
+        animation: fadeInDown 0.6s ease-out;
+    }
+
+    @@keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>

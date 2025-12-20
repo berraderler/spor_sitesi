@@ -1,0 +1,90 @@
+﻿@using Spor_web_sitesi.Identity
+@model IEnumerable<Spor_web_sitesi.Models.Randevu>
+
+@{
+    ViewData["Title"] = "Randevu Yönetimi";
+    List<AppUser> uyeler = ViewBag.Users;
+}
+
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold">Randevu Takvimi</h2>
+        <a asp-action="Al" class="btn btn-primary rounded-pill px-4 shadow-sm">
+            <i class="bi bi-plus-lg me-2"></i>Yeni Randevu Oluştur
+        </a>
+    </div>
+
+    <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="bg-light text-secondary small text-uppercase">
+                    <tr>
+                        <th class="ps-4 py-3">Üye / Tarih</th>
+                        <th class="py-3">Antrenör</th>
+                        <th class="py-3">Hizmet</th>
+                        <th class="py-3">Durum</th>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <th class="pe-4 py-3 text-end">İşlemler</th>
+                        }else {
+                            <th></th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (!Model.Any())
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center py-5 text-muted">Kayıtlı randevu bulunamadı.</td>
+                        </tr>
+                    }
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="ps-4">
+                                <div class="fw-bold">Üye #@uyeler.Where(u => u.Id == item.UyeId).FirstOrDefault()?.UserName</div>
+                                <div class="text-muted small">@item.RandevuTarihi.ToString("dd.MM.yyyy HH:mm")</div>
+                            </td>
+                            <td>@item.Antrenor?.AdSoyad</td>
+                            <td>
+                                <span class="badge bg-info-subtle text-info border px-3 py-2 rounded-pill">
+                                    @item.Hizmet?.Ad
+                                </span>
+                            </td>
+                            <td>
+                                @if (item.Durum == "Beklemede")
+                                {
+                                    <span class="badge bg-warning-subtle text-warning px-3 py-2 rounded-pill">Beklemede</span>
+                                }
+                                else if (item.Durum == "Onaylandı")
+                                {
+                                    <span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill">Onaylandı</span>
+                                }
+                                else if (item.Durum == "Reddedildi")
+                                {
+                                    <span class="badge bg-danger text-error px-3 py-2 rounded-pill">Reddedildi</span>
+                                }
+                            </td>
+                            @if (item.Durum == "Beklemede" && User.IsInRole("Admin"))
+                            {
+                                <td class="pe-4 text-end">
+                                        <form asp-action="Onayla" asp-route-id="@item.Id" method="post" style="display:inline;">
+                                            <button type="submit" class="btn btn-sm btn-success rounded-pill px-3">Onayla</button>
+                                        </form>
+                                </td>
+                            }else if(item.Durum =="Onaylandı" && User.IsInRole("Admin")){
+                                <td class="pe-4 text-end">
+                                    <form asp-action="Iptal" asp-route-id="@item.Id" method="post" style="display:inline;">
+                                        <button type="submit" class="btn btn-sm btn-success rounded-pill px-3">İptal</button>
+                                    </form>
+                                </td>
+                            }else if(item.Durum == "Reddedildi"){
+                                <td></td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Analiz>
+
+@{
+    ViewData["Title"] = "Analizler";
+}
+
+<div class="container mt-4">
+
+    <!-- Başlık + Yeni Analiz Butonu -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="fw-bold">Analizler</h3>
+
+        <a asp-action="Ekle" class="btn btn-primary">
+            <i class="bi bi-plus-circle me-1"></i>
+            Yeni Analiz Ekle
+        </a>
+    </div>
+
+    <!-- Analiz Listesi -->
+    @if (!Model.Any())
+    {
+        <div class="alert alert-warning text-center">
+            Henüz eklenmiş bir analiz bulunmamaktadır.
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-hover align-middle">
+                <thead class="table-light">
+                    <tr>
+                        <th>#</th>
+                        <th>Analiz Adı</th>
+                        <th>Açıklama</th>
+                        <th>Tarih</th>
+                        <th class="text-end">İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <!-- Ana satır -->
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.BoyCm</td>
+                            <td>@item.Kilo</td>
+                            <td>@item.AnalizTarihi.ToString("dd.MM.yyyy")</td>
+                            <td class="text-end">
+                                <button class="btn btn-sm btn-outline-info"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#detay-@item.Id"
+                                        aria-expanded="false">
+                                    Detay
+                                </button>
+                            </td>
+                        </tr>
+
+                        <!-- Collapse Detay Satırı -->
+                        <tr class="collapse bg-light" id="detay-@item.Id">
+                            <td colspan="5">
+                                <div class="p-3">
+                                    <h6 class="fw-bold mb-2">Analiz Detayı</h6>
+                                    <p><strong>Açıklama:</strong> @item.AnalizOzeti</p>
+                                    <p><strong>Oluşturma Tarihi:</strong> @item.AnalizTarihi.ToString("dd.MM.yyyy HH:mm")</p>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    }
+
+</div>
