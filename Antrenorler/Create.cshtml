@@ -1,0 +1,40 @@
+﻿@model spor_sitesi.Models.Antrenor
+
+<h2>Yeni Antrenör Ekle</h2>
+
+<form asp-action="Create" method="post">
+
+    <div>
+        <label>Ad</label>
+        <input asp-for="Ad" />
+    </div>
+
+    <div>
+        <label>Soyad</label>
+        <input asp-for="Soyad" />
+    </div>
+
+    <div>
+        <label>Uzmanlık Alanı</label>
+        <input asp-for="UzmanlikAlani" />
+    </div>
+
+    <div>
+        <label>Telefon</label>
+        <input asp-for="Telefon" />
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input asp-for="Email" />
+    </div>
+
+    <div>
+        <label>Müsaitlik Bilgisi</label>
+        <input asp-for="MusaitlikBilgisi" />
+    </div>
+
+    <button type="submit">Kaydet</button>
+</form>
+
+<a href="/Antrenorler">Listeye Dön</a>
