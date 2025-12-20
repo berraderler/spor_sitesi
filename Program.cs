@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Identity;
+ï»¿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Spor_web_sitesi.Data;
 using Spor_web_sitesi.Identity;
@@ -6,9 +6,9 @@ using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// --- EKLE: Session (Oturum) desteði ---
+// --- EKLE: Session (Oturum) desteï¿½i ---
 builder.Services.AddSession(options => {
-    options.IdleTimeout = TimeSpan.FromMinutes(30); // 30 dk iþlem yapmazsa atar
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // 30 dk iï¿½lem yapmazsa atar
 });
 
 builder.Services.AddIdentity<AppUser, IdentityRole>()
@@ -40,7 +40,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-// --- EKLE: Session kullanýmýný aç ---
+// --- EKLE: Session kullanï¿½mï¿½nï¿½ aï¿½ ---
 app.UseSession();
 
 app.UseAuthorization();
